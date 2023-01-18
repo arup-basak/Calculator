@@ -1,0 +1,78 @@
+@font-face {
+    font-family: medium;
+    src: url('./fonts/Barlow-Regular.ttf');
+}
+
+body {
+    font-family: medium;
+    font-size: 30px;
+}
+
+.container {
+    background-color: aqua;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.container, .buttons {
+    width: 400px;
+}
+
+.display {
+    height: 80px;
+    background-color: red;
+    outline: none;
+    padding: 12px;
+}
+
+.number_table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.operator_table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.button {
+    background-color: rgb(95, 95, 255);
+    text-align: center;
+    cursor: pointer;
+    padding: 12px;
+    transition: 300;
+}
+
+.button:hover {
+    background-color: blue;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.display, .button {
+    border-radius: 8px;
+}
+
+
+#zero {
+    grid-column: 1/4;
+}
+
+
+#equals {
+    grid-column: 1/3;
+}
+
+.unselectable {
+    -webkit-user-select: none;      
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
