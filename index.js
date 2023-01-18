@@ -30,15 +30,17 @@ function removeLast() {
 }
 
 buttonData.forEach((element) => {
-  element.onclick = function () {
-    if (element.innerText != "=") {
-        if (
+    element.onclick = function () {
+        if (element.innerText == "backspace") {
+            removeLast()
+        } else if (element.innerText != "=") {
+          if (
             operators.includes(element.innerText) &&
             operators.includes(equation[equation.length - 1])
-        ) {
+          ) {
             removeLast();
-        }
-      addValue(element.innerText);
-    } else solve();
+          }
+          addValue(element.innerText);
+        } else solve();
   };
 });
