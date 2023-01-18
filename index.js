@@ -3,8 +3,6 @@ const display = document.querySelector(".display");
 
 const operators = ["+", "-", "*", "/", "%", "."];
 
-// display.contentEditable = true
-
 let equation = "";
 let output = ""
 
@@ -34,11 +32,13 @@ buttonData.forEach((element) => {
         if (element.innerText == "backspace") {
             removeLast()
         } else if (element.innerText != "=") {
-          if (
-            operators.includes(element.innerText) &&
-            operators.includes(equation[equation.length - 1])
-          ) {
-            removeLast();
+            if (operators.includes(element.innerText)) {
+                if (equation.length == 0) {
+                    return;
+                } 
+                else if(operators.includes(equation[equation.length - 1])) {
+                    removeLast();
+                }
           }
           addValue(element.innerText);
         } else solve();
