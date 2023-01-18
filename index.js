@@ -1,7 +1,8 @@
 const buttonData = document.querySelectorAll(".button");
 const display = document.querySelector(".display");
 
-const operators = ["+", "-", "*", "/", "%", "."];
+const operators = ["+", "-", "×", "÷", "%", "."];
+const acceptedKeys = ["+", "-", "*", "/", "%", ".", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "="];
 
 let equation = "";
 let output = ""
@@ -45,3 +46,8 @@ buttonData.forEach((element) => {
         } else solve();
   };
 });
+
+
+document.addEventListener("onkeypress", (e) => {
+    console.log(e)
+})
