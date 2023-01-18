@@ -46,8 +46,3 @@ buttonData.forEach((element) => {
         } else solve();
   };
 });
-
-
-document.addEventListener("onkeypress", (e) => {
-    console.log(e)
-})
