@@ -16,7 +16,8 @@ function addValue(value) {
 }
 
 function solve() {
-    output = nerdamer.solve(`${equation}=x`, "x").toString();
+    const finalEQ = equation.replace("×", "*").replace("÷", "/");
+    output = nerdamer.solve(`${finalEQ}=x`, "x").toString();
     equation = ""
     display.innerText = output.substring(1, output.length -1); 
 }
